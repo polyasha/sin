@@ -8,4 +8,7 @@ class Comment extends Model
 {
     //
      protected $table="comments";
+     public function articles(){
+     return $this->belongsTo('App\Article');
+ }
 }
