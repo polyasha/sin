@@ -13,13 +13,13 @@ class ArticleController extends Controller
         $id = request()->route("id");
         if(is_null($id)){
           $articles = Article::all();
-        return view('articles', ["articles"=>$articles]);  
+        return view('articles', ["articles"=>$category]);  
         }
         $article = Article::find($id);
         if(is_null($article)){
         return redirect(route("article.get"));
       }
-      return view("article", ["article"=>$article]);
+      return view("article", ["article"=>$category]);
     }
     public function create(){
           $data = request()->all();

@@ -1,0 +1,41 @@
+body{
+    background: url('tlo.png') fixed;
+    background-size: cover;
+}
+.main-menu {
+    
+    padding: 15px;
+    width: 70vw;
+    margin: 0 auto;
+    opacity: 1;
+   
+}
+.main-menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-menu li{
+    border: 1px solid #AB886D;
+    cursor: pointer;
+    background: #DBD3CC;
+    width: 100%
+    height: auto;
+}
+.main-menu:hover {
+    opacity: .5;
+}
+.main-contener {
+    background: white;
+    padding: 15px;
+    width: 70vw;
+    margin: 0 auto;
+    opacity: 0.5;
+    cursor: pointer;
+    
+}
+.main-contener ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

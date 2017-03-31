@@ -1,3 +1,5 @@
+@extends('welcome')
+@section('content')
 <ul>
 @foreach($categories as $category)
 <li><a href="{{route("category.get", ["id"=>$category->id])}}">{{$category->name}}<a/></li>
@@ -10,5 +12,6 @@
     <button type="submit">Add category</button>
     <button type="reset">Cancel</button>
 </form>
+@stop
 
 
