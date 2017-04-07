@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Article;
+use App\Category;
+
 use App\Http\Requests;
 
 class ArticleController extends Controller
@@ -23,14 +26,16 @@ class ArticleController extends Controller
     }
     public function create(){
           $data = request()->all();
-          $name = array_get($data, "name");
-          if(is_null($name) ||strlen($name) ==0){
-              return redirect(route("article.get"));
-          }
+          $title = array_get($data, "title");
+          $content = array_get($data, "content");
+          $category_id = array_get($data, "category_id");
           $article = new Article();
-          $article->name = $name;
+          $category = Category::find($category_id);
+          $article->category()->associate($category);
+          $article->title = $title;
+          $article->content = $content;
           $article->save();
-          return redirect(route("article.get"));
+          return redirect(route("category.get", ["id"=>$category_id]));
       }
         }
 
