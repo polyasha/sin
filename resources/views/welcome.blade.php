@@ -5,6 +5,8 @@
             <meta charset="UFT-8">
             <link rel='stylesheet' href='{{asset('style.css')}}'>
             <link rel='stylesheet' href='{{asset('css/bootstrap.min.css')}}'>
+            <script src="{{asset('jquery.min.js')}}" defer></script>
+            <script src="{{asset('script.js')}}" defer></script>
         </head> 
 
         <BODY class="container-fluid">
@@ -29,7 +31,9 @@
                     </div>
                     <div class="col-md-2"></div>
                 </div>
-                <footer></footer>
+            <footer>
+                <button id="bgChanger" type="button" class="btn btn-danger" onclick="changeBg('{{asset("tlo2.jpg")}}','{{asset("tlo.png")}}')">change bg</button>
+            </footer>
         </BODY>
     </html>
 
